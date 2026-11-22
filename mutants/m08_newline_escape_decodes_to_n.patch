@@ -1,0 +1,11 @@
+--- a/kv.go
++++ b/kv.go
+@@ -77,7 +77,7 @@
+ 			case '=':
+ 				cur.WriteByte('=')
+ 			case 'n':
+-				cur.WriteByte('\n')
++				cur.WriteByte('n')
+ 			default:
+ 				return nil, fmt.Errorf("invalid escape sequence at byte %d", i)
+ 			}

@@ -1,0 +1,12 @@
+--- a/kv.go
++++ b/kv.go
+@@ -65,9 +65,6 @@
+ 	for i := 0; i < len(line); i++ {
+ 		switch c := line[i]; c {
+ 		case '\\':
+-			if i+1 >= len(line) {
+-				return nil, errors.New("dangling escape at end of line")
+-			}
+ 			i++
+ 			switch line[i] {
+ 			case '\\':

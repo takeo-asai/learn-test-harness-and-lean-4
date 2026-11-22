@@ -1,0 +1,11 @@
+--- a/kv.go
++++ b/kv.go
+@@ -134,7 +134,7 @@
+ 			}
+ 			keys = append(keys, k)
+ 		}
+-		sort.Strings(keys)
++		sort.Sort(sort.Reverse(sort.StringSlice(keys)))
+ 		for i, k := range keys {
+ 			if i > 0 {
+ 				b.WriteByte(',')

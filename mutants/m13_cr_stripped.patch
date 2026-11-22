@@ -1,0 +1,11 @@
+--- a/kv.go
++++ b/kv.go
+@@ -22,7 +22,7 @@
+ 	}
+ 	input = strings.TrimSuffix(input, "\n")
+ 	for i, line := range strings.Split(input, "\n") {
+-		rec, err := parseLine(line)
++		rec, err := parseLine(strings.TrimSuffix(line, "\r"))
+ 		if err != nil {
+ 			return nil, fmt.Errorf("line %d: %w", i+1, err)
+ 		}

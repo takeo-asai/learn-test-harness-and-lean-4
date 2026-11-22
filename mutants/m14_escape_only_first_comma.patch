@@ -1,0 +1,20 @@
+--- a/kv.go
++++ b/kv.go
+@@ -105,11 +105,17 @@
+ // escape は 4 つの特殊文字（\ , = 改行）をエスケープする。それ以外はそのまま。
+ func escape(s string) string {
+ 	var b strings.Builder
++	seenComma := false
+ 	for i := 0; i < len(s); i++ {
+ 		switch c := s[i]; c {
+ 		case '\\':
+ 			b.WriteString(`\\`)
+ 		case ',':
++			if seenComma {
++				b.WriteByte(c)
++				continue
++			}
++			seenComma = true
+ 			b.WriteString(`\,`)
+ 		case '=':
+ 			b.WriteString(`\=`)

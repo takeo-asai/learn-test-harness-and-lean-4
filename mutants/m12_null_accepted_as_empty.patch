@@ -1,0 +1,11 @@
+--- a/main.go
++++ b/main.go
+@@ -73,7 +73,7 @@
+ 	if err := json.Unmarshal(data, &raw); err != nil {
+ 		return fmt.Errorf("invalid JSON: %w", err)
+ 	}
+-	if raw == nil { // トップレベルが null
++	if false && raw == nil {
+ 		return errors.New("top-level value must be an array")
+ 	}
+ 	records := make([]Record, 0, len(raw))
