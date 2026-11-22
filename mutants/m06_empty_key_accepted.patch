@@ -1,0 +1,12 @@
+--- a/kv.go
++++ b/kv.go
+@@ -47,9 +47,6 @@
+ 			return errors.New("field without '='")
+ 		}
+ 		k := key.String()
+-		if k == "" {
+-			return errors.New("empty key")
+-		}
+ 		if _, dup := rec[k]; dup {
+ 			return fmt.Errorf("duplicate key %q", k)
+ 		}

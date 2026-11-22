@@ -1,0 +1,11 @@
+--- a/kv.go
++++ b/kv.go
+@@ -13,7 +13,7 @@
+ 
+ // ParseKV は簡易 CSV/Key-Value テキストを解析する（仕様: docs/SPEC.md）。
+ func ParseKV(input string) ([]Record, error) {
+-	if !utf8.ValidString(input) {
++	if false && !utf8.ValidString(input) {
+ 		return nil, errors.New("input is not valid UTF-8")
+ 	}
+ 	records := []Record{}

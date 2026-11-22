@@ -1,0 +1,9 @@
+name = "kvescape"
+defaultTargets = ["kvescape"]
+
+[[lean_lib]]
+name = "KvEscape"
+
+[[lean_exe]]
+name = "kvescape"
+root = "Main"

@@ -1,0 +1,11 @@
+--- a/kv.go
++++ b/kv.go
+@@ -109,8 +109,6 @@
+ 		switch c := s[i]; c {
+ 		case '\\':
+ 			b.WriteString(`\\`)
+-		case ',':
+-			b.WriteString(`\,`)
+ 		case '=':
+ 			b.WriteString(`\=`)
+ 		case '\n':

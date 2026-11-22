@@ -1,0 +1,16 @@
+plain
+a\,b
+a\=b
+a\\b
+a\nb
+\\\\
+\
+a\
+\x
+\t
+a=b
+a,b
+a,b=c
+\,\,\,
+n
+あ\n🍣
